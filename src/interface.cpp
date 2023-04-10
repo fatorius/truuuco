@@ -20,6 +20,7 @@ enum comandosValidos {
     cmdVira,
     cmdHelp,
     cmdStarter,
+    cmdLine,
     endProgram 
 };
 
@@ -30,6 +31,7 @@ void initCommands(){
     comandosValidosMap["help"] = cmdHelp;
     comandosValidosMap["vira"] = cmdVira;
     comandosValidosMap["starter"] = cmdStarter;
+    comandosValidosMap["line"] = cmdLine;
     comandosValidosMap["end"] = endProgram;
 }
 
@@ -60,6 +62,9 @@ bool readCommand(){
                 break;
             }
             setStarter(stoi(commands[1]));
+            break;
+        case cmdLine:
+            setLine(&commands);
             break;
         case endProgram:
             return false;

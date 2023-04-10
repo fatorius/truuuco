@@ -6,6 +6,7 @@
 int mao[3];
 int vira;
 int starter;
+int line[7];
 
 void initState(){
     memset(mao, 0, sizeof(mao));
@@ -34,5 +35,15 @@ void setMao(vector<string> *cartas){
 
     for (unsigned int i = 1; i < crds.size(); i++){
         mao[i] = stoi(crds[i]);
+    }
+}
+
+void setLine(vector<string> *linha){
+    vector<string> lnh = *linha;
+
+    memset(line, 0, sizeof(line));
+
+    for (unsigned int i = 1; i < lnh.size(); i++){
+        line[i] = stoi(lnh[i]);
     }
 }

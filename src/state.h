@@ -11,10 +11,14 @@ using namespace std;
 
 extern int mao[3];
 extern int vira;
+extern int starter;
+
+extern int line[7];
 
 void initState();
 void setMao(vector<string> *cartas);
 void setVira(vector<string> *viras);
 void setStarter(int st);
+void setLine(vector<string> *linha);
 
 #endif
