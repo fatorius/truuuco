@@ -3,4 +3,6 @@
 
 void printHelp();
 
+void starterInvalidArgument();
+
 #endif

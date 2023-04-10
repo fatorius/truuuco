@@ -5,14 +5,19 @@
 
 int mao[3];
 int vira;
+int starter;
 
 void initState(){
     memset(mao, 0, sizeof(mao));
     vira = 0;
+    starter = ELES;
+}
+
+void setStarter(int st){
+    starter = st;
 }
 
 void setVira(vector<string> *viras){
-
     vector<string> vrs = *viras;
 
     vira = 0;

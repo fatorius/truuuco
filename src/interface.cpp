@@ -19,6 +19,7 @@ enum comandosValidos {
     cmdHand,
     cmdVira,
     cmdHelp,
+    cmdStarter,
     endProgram 
 };
 
@@ -28,6 +29,7 @@ void initCommands(){
     comandosValidosMap["hand"] = cmdHand;
     comandosValidosMap["help"] = cmdHelp;
     comandosValidosMap["vira"] = cmdVira;
+    comandosValidosMap["starter"] = cmdStarter;
     comandosValidosMap["end"] = endProgram;
 }
 
@@ -52,10 +54,18 @@ bool readCommand(){
         case cmdVira:
             setVira(&commands);
             break;
+        case cmdStarter:
+            if (commands[1] != "0" and commands[1] != "1"){
+                starterInvalidArgument();
+                break;
+            }
+            setStarter(stoi(commands[1]));
+            break;
         case endProgram:
             return false;
         default:
-            cout<<"Comando desconhecido pelo programa, digite help para uma lista de comandos validos"<<endl;
+            cout<<"Comando desconhecido pelo programa"<<endl;
+            cout<<"Digite help para uma lista de comandos validos"<<endl;
             break;
     }
 
