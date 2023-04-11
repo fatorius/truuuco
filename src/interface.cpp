@@ -7,6 +7,7 @@
 #include "help.h"
 #include "interface.h"
 #include "state.h"
+#include "baralho.h"
 
 using namespace std;
 
@@ -73,6 +74,8 @@ bool readCommand(){
             cout<<"Digite help para uma lista de comandos validos"<<endl;
             break;
     }
+
+    updateBaralhos();
 
     return true;
 }

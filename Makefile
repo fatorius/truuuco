@@ -6,7 +6,9 @@ SRCS = ./src/main.o \
 		./src/interface.o \
 		./src/init.o \
 		./src/help.o \
-		./src/state.o
+		./src/state.o \
+		./src/baralho.o \
+		./src/bits.o
 
 build: $(SRCS)
 	@ $(COMP) $(CXXFLAGS) -o $(EXE) $(SRCS)

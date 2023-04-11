@@ -1,6 +1,8 @@
 #ifndef BARALHO
 #define BARALHO
 
+#define TOTAL_DE_CARTAS 24
+
 #define _qO 1
 #define _qE 2
 #define _qC 3
@@ -30,5 +32,11 @@
 #define _3E 22
 #define _3C 23
 #define _3P 24
+
+extern int fullBaralho[TOTAL_DE_CARTAS];
+extern int baralhoAvaliable;
+
+void initBaralho();
+void updateBaralhos();
 
 #endif

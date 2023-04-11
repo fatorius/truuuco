@@ -12,7 +12,6 @@ using namespace std;
 extern int mao[3];
 extern int vira;
 extern int starter;
-
 extern int line[7];
 
 void initState();

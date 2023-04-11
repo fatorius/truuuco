@@ -3,6 +3,8 @@
 #include "init.h"
 #include "interface.h"
 #include "state.h"
+#include "bits.h"
+#include "baralho.h"
 
 using namespace std;
 
@@ -13,8 +15,10 @@ void printInitMessage(){
 }
 
 void init(){
+    initMascaras();
     initCommands();
     initState();
+    initBaralho();
 
     printInitMessage();
 }
